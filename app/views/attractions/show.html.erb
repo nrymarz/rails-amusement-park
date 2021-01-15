@@ -1,0 +1,9 @@
+<h1> <%= @attraction.name %></h1>
+<%= @attraction.tickets %><br>
+<%= @attraction.min_height %><br>
+<%= @attraction.happiness_rating %><br>
+<%= @attraction.nausea_rating %><br>
+
+<%= button_to "Go on this ride", takeride_path, method:'POST' %>
+<%= link_to('Edit Attraction', edit_attraction_path(@attraction)) if logged_in_as_admin? %> |
+<%= link_to 'Back', attractions_path %>
